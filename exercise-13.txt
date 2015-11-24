@@ -1,0 +1,21 @@
+mysql> select count(*) from Entry where contentLineOne like "(3%" or contentLineOne like "1-3%";
++----------+
+| count(*) |
++----------+
+|       60 |
++----------+
+
+mysql> select count(*) from Entry where type="home" and contentLineOne not like "%5%" and subtype="phone";
++----------+
+| count(*) |
++----------+
+|       76 |
++----------+
+
+mysql> select count(*) from Entry where type="work" and contentLineOne like "1-%";
++----------+
+| count(*) |
++----------+
+|       60 |
++----------+
+
